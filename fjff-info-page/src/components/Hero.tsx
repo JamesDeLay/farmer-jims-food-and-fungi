@@ -1,19 +1,14 @@
 import Image from "next/image";
-import { Sigmar_One } from "@next/font/google"
-
+import { sigmar } from "../lib/fonts"
 interface HeroProps {
     title: String,
     subTitle?: String
 }
 
-const sigmar = Sigmar_One({
-    weight: '400',
-    subsets: ['latin']
-})
 
 export default function Hero({ title, subTitle }: HeroProps) {
     return (
-        <section className="hero w-full flex flex-col bg-hero-pattern">
+        <section className="hero w-full flex flex-col bg-hero-pattern md:pb-10">
             <Image
                 className="m-auto"
                 src={"/assets/logo.png"}
@@ -29,3 +24,4 @@ export default function Hero({ title, subTitle }: HeroProps) {
         </section>
     )
 }
+
