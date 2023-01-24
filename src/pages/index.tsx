@@ -32,9 +32,8 @@ export default function Home({ cultivar }: Props) {
           </p>
         </article>
       </ContentWrapper>
-      {/* <h3 className='text-2xl'>Products</h3> */}
-
       <ContentWrapper title="Products">
+        <p>Products Placeholder...</p>
       </ContentWrapper>
       <ContentWrapper title="Our Cultivar">
         <div className='grid grid-cols-1  md:grid-cols-3'>
@@ -62,7 +61,6 @@ export default function Home({ cultivar }: Props) {
 
 export const getStaticProps = async () => {
   const cultivar = getCultivars()
-  console.log(cultivar)
   return {
     props: { cultivar },
   }

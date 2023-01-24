@@ -9,7 +9,7 @@ type Props = {
 export default function Card({ title, subTitle, imgURL }: Props) {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg mb-4">
-            <div className="w-full overflow-hidden" style={{ maxHeight: `300px` }}>
+            <div className="w-full overflow-hidden" style={{ maxHeight: `300px`, height: `300px` }}>
                 <Image src={imgURL} alt={title} height={300} width={400} />
             </div>
             <div className="px-4 py-4 bg-white">
