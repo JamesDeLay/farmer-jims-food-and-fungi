@@ -2,26 +2,17 @@ import Hero from '@/components/Hero'
 import NavBar from '@/components/NavBar'
 import Layout from '@/layouts/Layout'
 import ContentWrapper from '@/layouts/ContentWrapper'
-import { getCultivars } from '@/lib/api'
-import { Cultivar } from '@/lib/types'
+import { getCultivar } from '@/lib/api'
+import { Specimen } from '@/lib/types'
 import Card from '@/components/Card'
 
 type Props = {
-  cultivar: Cultivar[]
+  cultivar: Specimen[]
 }
 
 export default function Home({ cultivar }: Props) {
   return (
-    <Layout>
-      <div className='posi'>
-        <NavBar routes={[]} />
-      </div>
-      <div className='w-full'>
-        <Hero title="Farmer Jim's" subTitle="Food and Fungi" />
-      </div>
-      <div>
-
-      </div>
+    <Layout isLandingPage>
       <ContentWrapper title="About">
         <article className='prose-lg lg:prose-2xl m-auto'>
           <p>
@@ -32,15 +23,16 @@ export default function Home({ cultivar }: Props) {
           </p>
         </article>
       </ContentWrapper>
-      <ContentWrapper title="Products">
+      <ContentWrapper title="Products" transparent>
         <p>Products Placeholder...</p>
       </ContentWrapper>
-      <ContentWrapper title="Our Cultivar">
-        <div className='grid grid-cols-1  md:grid-cols-3'>
+      <ContentWrapper title="Our Cultivar" transparent>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           {
-            cultivar.map((specimen: Cultivar, idx: Number) => {
+            cultivar.map((specimen: Specimen, idx: Number) => {
               return (
                 <Card
+                  link={specimen.filePath}
                   key={`${idx}`}
                   title={specimen.commonName}
                   subTitle={specimen.scientificName}
@@ -51,16 +43,13 @@ export default function Home({ cultivar }: Props) {
           }
         </div>
       </ContentWrapper>
-      <div className='mt-4 mb-12'>
-
-      </div>
     </Layout>
   )
 }
 
 
 export const getStaticProps = async () => {
-  const cultivar = getCultivars()
+  const cultivar = getCultivar()
   return {
     props: { cultivar },
   }

@@ -4,17 +4,23 @@ import matter from 'gray-matter'
 
 const filePathURL = join(process.cwd(), 'src/_markdown/cultivar')
 
-type getCultivarProps = {
-    cultivar: String
+export function getSpecimenBySlug(slug: string) {
+    const cultivar = getCultivar()
+    const specimen = cultivar.find((specimen) => specimen.filePath === slug)
+    return specimen
 }
 
-export function getCultivars() {
+export function getCultivar() {
     const files = fs.readdirSync(filePathURL)
-    return files.map((file) => {
-        const fullPath = join(filePathURL, file)
+    return files.map((filePath) => {
+        const fullPath = join(filePathURL, filePath)
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const { data, content } = matter(fileContents)
-        return { ...data, content }
+        return {
+            filePath: filePath.split('.')[0],
+            content,
+            ...data
+        }
     })
 
 }

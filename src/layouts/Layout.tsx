@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
+import NavBar from '../components/NavBar';
+import Hero from '../components/Hero';
+import Footer from '@/components/Footer';
 
 type LayoutProps = {
-    children: ReactNode
+    children: ReactNode,
+    isLandingPage?: boolean;
 }
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, isLandingPage }: LayoutProps) {
     return (
         <>
             <Head>
@@ -13,8 +17,15 @@ export default function Layout({ children }: LayoutProps) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                {children}
+            <main className='bg-gray-50 min-h-screen'>
+                <NavBar routes={[]} />
+                <div className='mt-10'>
+                    <Hero isLandingPage={isLandingPage} title="Farmer Jim's" subTitle="Food and Fungi" />
+                </div>
+                <div className='mb-10'>
+                    {children}
+                </div>
+                <Footer />
             </main>
         </>
     )

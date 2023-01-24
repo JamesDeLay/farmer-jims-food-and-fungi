@@ -9,7 +9,7 @@ interface NavProps {
 
 export default function NavBar({ routes, }: NavProps) {
     return (
-        <nav className="w-full bg-black p-4">
+        <nav className="w-full bg-black p-4 fixed top-0">
             <p className="text-white">Nav</p>
         </nav>
     )
