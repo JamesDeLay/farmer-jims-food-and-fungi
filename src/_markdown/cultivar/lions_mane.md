@@ -2,7 +2,7 @@
 lastEdited: "1/23/23"
 commonName: "Lion's Mane"
 scientificName: "Hericium erinaceus"
-imgURL: "/assets/lions_mane.jpg"
+imgURL: "/assets/lions_mane.png"
 nativeTo:
     - Asia
     - North America

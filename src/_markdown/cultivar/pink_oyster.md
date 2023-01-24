@@ -2,7 +2,7 @@
 lastEdited: "1/23/23"
 commonName: "Pink Oyster"
 scientificName: "Pleurotus djamor"
-imgURL: "/assets/pink_oyster.jpg"
+imgURL: "/assets/pink_oyster.png"
 nativeTo:
     - Asia
     - South America

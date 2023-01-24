@@ -17,27 +17,18 @@ type Params = {
     }
 }
 export default function SpecimenPage({ specimen }: Props) {
-    // const router = useRouter()
-    // if (!router.isFallback && !post?.slug) {
-    //   return <ErrorPage statusCode={404} />
-    // }
-    useEffect(() => {
-        console.log({ specimen })
-    }, [])
-
     return (
-        <Layout>
+        <Layout isLandingPage={false}>
             <div className="-mt-14 mx-4 md:mx-0">
                 <ContentWrapper>
                     <div className="grid md:grid-cols-2">
-                        <Image alt={specimen.scientificName} src={specimen.imgURL} height={300} width={600} />
+                        <Image className="bg-black rounded-lg" alt={specimen.scientificName} src={specimen.imgURL} height={300} width={600} />
                         <div className="mt-2">
                             <h3 className={`font-bold text-2xl ${roboto.className}`}>{specimen.commonName}</h3>
                             <h4 className={`italic text-xl ${roboto.className}`}>{specimen.scientificName}</h4>
                             <p className="prose mt-2">{specimen.content}</p>
                         </div>
                     </div>
-
                 </ContentWrapper>
             </div>
         </Layout>

@@ -2,7 +2,7 @@
 lastEdited: "1/23/23"
 commonName: "Turkey Tail"
 scientificName: "Trametes versicolor"
-imgURL: "/assets/turkey_tail.jpg"
+imgURL: "/assets/turkey_tail.png"
 nativeTo:
     - Asia
     - North America

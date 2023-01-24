@@ -25,7 +25,7 @@ export default function Layout({ children, isLandingPage }: LayoutProps) {
                 <div className='mb-10'>
                     {children}
                 </div>
-                <Footer />
+                <Footer isLandingPage={isLandingPage} />
             </main>
         </>
     )

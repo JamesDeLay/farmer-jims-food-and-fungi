@@ -2,7 +2,7 @@
 lastEdited: "1/23/23"
 commonName: "Golden Oyster"
 scientificName: "Pleurotus citrinopileatus"
-imgURL: "/assets/golden_oyster.jpg"
+imgURL: "/assets/golden_oyster.png"
 nativeTo:
     - Asia
     - South America

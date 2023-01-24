@@ -10,12 +10,12 @@ type Props = {
 }
 export default function Card({ title, subTitle, imgURL, link = "" }: Props) {
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg mb-4">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <Link
                 as={`/cultivar/${link}`}
                 href="/cultivar/[slug]"
             >
-                <div className="w-full overflow-hidden bg-black" style={{ maxHeight: `300px` }}>
+                <div className="w-full overflow-hidden bg-black" style={{ height: `275px` }}>
                     <Image src={imgURL} alt={title} height={300} width={400} />
                 </div>
                 <div className="px-4 py-4 bg-primaryLight text-primaryDark">
