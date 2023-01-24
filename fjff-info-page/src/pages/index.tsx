@@ -3,9 +3,11 @@ import NavBar from '@/components/NavBar'
 import Layout from '@/layouts/Layout'
 import ContentWrapper from '@/layouts/ContentWrapper'
 import { getCultivars } from '@/lib/api'
+import { Cultivar } from '@/lib/types'
+import Card from '@/components/Card'
 
 type Props = {
-  cultivar: any
+  cultivar: Cultivar[]
 }
 
 export default function Home({ cultivar }: Props) {
@@ -35,18 +37,32 @@ export default function Home({ cultivar }: Props) {
       <ContentWrapper title="Products">
       </ContentWrapper>
       <ContentWrapper title="Our Cultivar">
-        {
-          cultivar.map((specimen: any) => {
-            return (<p key={specimen}>{specimen.test}</p>)
-          })
-        }
+        <div className='grid grid-cols-1  md:grid-cols-3'>
+          {
+            cultivar.map((specimen: Cultivar, idx: Number) => {
+              return (
+                <Card
+                  key={`${idx}`}
+                  title={specimen.commonName}
+                  subTitle={specimen.scientificName}
+                  imgURL={specimen.imgURL}
+                />
+              )
+            })
+          }
+        </div>
       </ContentWrapper>
+      <div className='mt-4 mb-12'>
+
+      </div>
     </Layout>
   )
 }
 
+
 export const getStaticProps = async () => {
   const cultivar = getCultivars()
+  console.log(cultivar)
   return {
     props: { cultivar },
   }
