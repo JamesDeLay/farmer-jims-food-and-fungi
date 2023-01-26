@@ -19,9 +19,7 @@ export default function Layout({ children, isLandingPage }: LayoutProps) {
             </Head>
             <main className='bg-gray-50 min-h-screen'>
                 <NavBar routes={[]} />
-                <div className='mt-10'>
-                    <Hero isLandingPage={isLandingPage} title="Farmer Jim's" subTitle="Food and Fungi" />
-                </div>
+                <Hero isLandingPage={isLandingPage} title="Farmer Jim's" subTitle="Food and Fungi" />
                 <div className='mb-10'>
                     {children}
                 </div>

@@ -1,3 +1,5 @@
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
 export type Specimen = {
     lastEdited: string
     commonName: string
@@ -6,4 +8,10 @@ export type Specimen = {
     nativeTo: Array<string>
     filePath: string;
     content?: string;
+}
+
+export type SiteSocial = {
+    name: string;
+    url: string;
+    icon: IconDefinition
 }
