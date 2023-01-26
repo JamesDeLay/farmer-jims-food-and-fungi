@@ -25,7 +25,7 @@ export default function SpecimenPage({ specimen }: Props) {
             <div className="-mt-14 mx-4 mb-40 md:mx-0">
                 <ContentWrapper>
                     <div className="grid md:grid-cols-2">
-                        <Image className="bg-black rounded-lg" alt={specimen.scientificName} src={specimen.imgURL} height={300} width={600} />
+                        <Image className="bg-dark rounded-lg" alt={specimen.scientificName} src={specimen.imgURL} height={300} width={600} />
                         <div className="mt-2">
                             <h3 className={`font-bold text-2xl mb-2 ${roboto.className}`}>{specimen.commonName}</h3>
                             <h4 className={`italic text-xl mb-2 ${roboto.className}`}>{specimen.scientificName}</h4>

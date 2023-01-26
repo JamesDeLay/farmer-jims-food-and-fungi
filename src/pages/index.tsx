@@ -23,9 +23,9 @@ export default function Home({ cultivar }: Props) {
           </p>
         </article>
       </ContentWrapper>
-      <ContentWrapper title="Products">
+      {/* <ContentWrapper title="Products">
         <p>Products Placeholder...</p>
-      </ContentWrapper>
+      </ContentWrapper> */}
       <ContentWrapper title="Our Cultivar" containerClasses='mb-4' >
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {
