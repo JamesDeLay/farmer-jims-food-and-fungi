@@ -25,7 +25,7 @@ export default function SpecimenPage({ specimen }: Props) {
     return (
         <Layout isLandingPage={false}>
             <div className="-mt-14 mx-4 mb-40 md:mx-0">
-                <Image className="bg-dark rounded-lg m-auto" alt={scientificName} src={imgURL} height={300} width={800} />
+                <Image priority className="bg-dark rounded-lg m-auto" alt={scientificName} src={imgURL} height={600} width={600} />
                 <ContentWrapper>
                     <div className="flex flex-col">
                         <div className="mt-2">
