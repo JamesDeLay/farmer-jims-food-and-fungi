@@ -23,7 +23,7 @@ export default function Layout({ children, isLandingPage }: LayoutProps) {
                 <div className='mb-20 over'>
                     {children}
                 </div>
-                <Footer isLandingPage={isLandingPage} />
+                <Footer />
             </main>
         </>
     )
