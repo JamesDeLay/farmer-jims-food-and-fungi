@@ -11,7 +11,7 @@ type NavItem = {
 }
 
 type NavProps = {
-    routes: Array<NavItem>
+    routes?: Array<NavItem>
 }
 
 //Mobile - 600
@@ -19,7 +19,7 @@ type NavProps = {
 export default function NavBar({ routes, }: NavProps) {
     const [toggleTransparent, setToggleTransparent] = useState(true)
     const onScroll = () => {
-        if (window.scrollY >= 550) {
+        if (window.scrollY >= 50) {
             setToggleTransparent(false)
         } else {
             setToggleTransparent(true)

@@ -22,7 +22,7 @@ const SiteSocial = ({ social }: SiteSocialProps) => {
 
 export default function Footer() {
     const classes = classNames({
-        " w-full bg-gray-300 flex justify-center bottom-0 fixed": true,
+        " w-full bg-gray-100 flex justify-center pt-8 pb-4": true,
     })
     return (
         <footer className={classes}>

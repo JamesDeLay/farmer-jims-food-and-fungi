@@ -20,7 +20,7 @@ export default function Layout({ children, isLandingPage }: LayoutProps) {
             <main className='bg-gray-50 min-h-screen'>
                 <NavBar routes={[]} />
                 <Hero isLandingPage={isLandingPage} title="Farmer Jim's" subTitle="Food and Fungi" />
-                <div className='mb-20 over'>
+                <div className='mb-20'>
                     {children}
                 </div>
                 <Footer />

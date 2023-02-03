@@ -9,7 +9,7 @@ interface AboutProps {
 
 export default function MarkdownContent({ content }: AboutProps) {
     return (
-        <ReactMarkdown className="prose md:prose-2xl max-w-none text-dark" remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown className="prose md:prose-xl max-w-none text-dark" remarkPlugins={[remarkGfm]}>
             {content}
         </ReactMarkdown>
     )
