@@ -10,7 +10,7 @@ type Props = {
 }
 export default function Card({ title, subTitle, imgURL, link = "" }: Props) {
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-xl m-auto">
+        <div className="max-w-sm rounded overflow-hidden drop-shadow-card-shadow m-auto">
             <Link
                 as={`/cultivar/${link}`}
                 href="/cultivar/[slug]"
@@ -18,9 +18,9 @@ export default function Card({ title, subTitle, imgURL, link = "" }: Props) {
                 <div className="w-full overflow-hidden bg-dark" style={{ height: `275px` }}>
                     <Image src={imgURL} alt={title} height={300} width={400} />
                 </div>
-                <div className="px-4 py-4 bg-gray-200 text-dark">
-                    <h4 className={`${roboto.className} font-bold text-2xl`}>{title}</h4>
-                    <h5 className={`${roboto.className} italic text-xl`}>{subTitle}</h5>
+                <div className="px-4 py-2 text-dark bg-primary">
+                    <h4 className={`${roboto.className} text-white drop-shadow-hero-shadow font-bold text-2xl`}>{title}</h4>
+                    <h5 className={`${roboto.className} text-dark italic text-xl`}>{subTitle}</h5>
                 </div>
             </Link>
         </div>

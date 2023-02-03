@@ -6,13 +6,15 @@ export interface SiteConfig {
     socials: Array<SiteSocial>
 }
 
+
 export const config: SiteConfig = {
-    email: 'farmerjims@gmail.com',
+    email: 'farmerjimsmushrooms@gmail.com',
     socials: [
         {
             name: "Email",
-            url: `mailto://farmerjims@gmail.com`,
+            url: `mailto:farmerjimsmushrooms@gmail.com`,
             icon: faEnvelope
         }
     ]
 }
+

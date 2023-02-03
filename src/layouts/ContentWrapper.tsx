@@ -11,7 +11,7 @@ type WithHeadingProps = {
 
 export default function ContentWrapper({ title, children, transparent, containerClasses }: WithHeadingProps) {
     const wrapperClass = cn({
-        "p-4 max-w-7xl m-auto rounded-lg mt-2 mb-2": true,
+        "p-4 max-w-6xl m-auto rounded-lg mt-2 mb-2": true,
         "bg-white": !transparent,
     })
     return (

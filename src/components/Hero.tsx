@@ -27,8 +27,8 @@ export default function Hero({ title, subTitle, isLandingPage }: HeroProps) {
             {
                 isLandingPage && (
                     <div className="overlay relative z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit">
-                        <h1 className={`${sigmar.className} text-light text-5xl text-center md:text-7xl drop-shadow-hero-shadow`}>{title}</h1>
-                        {subTitle && <h2 className={`${sigmar.className} text-light text-2xl md:text-4xl text-center mt-4 drop-shadow-hero-shadow`}>{subTitle}</h2>}
+                        <h1 className={`${sigmar.className} text-white drop-shadow-hero-shadow text-5xl text-center md:text-7xl`}>{title}</h1>
+                        {subTitle && <h2 className={`${sigmar.className} text-white drop-shadow-hero-shadow text-2xl md:text-4xl text-center mt-4`}>{subTitle}</h2>}
                     </div>
                 )
             }

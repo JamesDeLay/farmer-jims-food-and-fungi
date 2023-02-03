@@ -7,7 +7,12 @@ export type Specimen = {
     imgURL: string
     nativeTo: Array<string>
     filePath: string;
-    content?: string;
+    content: string;
+}
+
+export type CompanyAbout = {
+    lastUpdated: string;
+    content: string;
 }
 
 export type SiteSocial = {

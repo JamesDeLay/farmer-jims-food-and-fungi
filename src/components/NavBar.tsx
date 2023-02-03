@@ -46,7 +46,7 @@ export default function NavBar({ routes, }: NavProps) {
         <nav className={containerClasses}>
             <div className={iconClasses}>
                 <Link href="/">
-                    <FontAwesomeIcon icon={faHome} className='text-primary text-sm' />
+                    <FontAwesomeIcon icon={faHome} className='text-white text-sm' />
                 </Link>
             </div>
         </nav>

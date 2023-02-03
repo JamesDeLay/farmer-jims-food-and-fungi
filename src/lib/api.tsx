@@ -2,7 +2,8 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
-const filePathURL = join(process.cwd(), 'src/_markdown/cultivar')
+const cultivarPathURL = join(process.cwd(), 'src/_markdown/cultivar')
+const companyAboutPathURL = join(process.cwd(), 'src/_markdown/meta')
 
 export function getSpecimenBySlug(slug: string) {
     const cultivar = getCultivar()
@@ -11,9 +12,9 @@ export function getSpecimenBySlug(slug: string) {
 }
 
 export function getCultivar() {
-    const files = fs.readdirSync(filePathURL)
+    const files = fs.readdirSync(cultivarPathURL)
     return files.map((filePath) => {
-        const fullPath = join(filePathURL, filePath)
+        const fullPath = join(cultivarPathURL, filePath)
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const { data, content } = matter(fileContents)
         return {
@@ -22,5 +23,16 @@ export function getCultivar() {
             ...data
         }
     })
+}
 
+export function getCompanyAbout() {
+    // return "SEE"
+    const fullPath = join(companyAboutPathURL, "company_about.md")
+    const fileContents = fs.readFileSync(fullPath, 'utf-8')
+    const { data, content } = matter(fileContents)
+    return {
+
+        content: content.trim(),
+        ...data
+    }
 }

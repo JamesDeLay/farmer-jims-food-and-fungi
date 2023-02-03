@@ -6,14 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "dark": `#00100B`,
-        "primary": `#762E2F`,
-        "secondary": `#8A95A5`,
-        "accent-1": `#B9C6AE`,
-        "light": `#E9E3B4`,
+        "dark": `#090C02`,
+        "primary": `#80D39B`,
+        "secondary": `#58641D`,
+        "tertiary": `#A1E887`,
+        "accent": `#5465ff`,
+
       },
       dropShadow: {
-        "hero-shadow": '0 5px 8px black'
+        "hero-shadow": '0 0 2px black',
+        "card-shadow": '0 0 6px gray'
       },
       backgroundImage: {
         "hero-pattern": "url('/assets/pattern.svg')",
